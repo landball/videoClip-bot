@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from discord import app_commands
 from core.classes import Cog_extension
 import google.generativeai as genai
 import os
