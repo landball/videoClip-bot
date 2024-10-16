@@ -1,13 +1,10 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-from dotenv import load_dotenv
 import os
 import asyncio
 
 intents=discord.Intents.all()
-
-load_dotenv()
 
 bot=commands.Bot(command_prefix='a!', intents=intents)
 
@@ -40,7 +37,7 @@ async def load_extenstions():
 async def main():
     async with bot:
         await load_extenstions()
-        await bot.start(os.getenv('token'))
+        await bot.start(os.environ.get('token'))
 
 async def on_tree_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
     if isinstance(error, app_commands.CommandOnCooldown):
