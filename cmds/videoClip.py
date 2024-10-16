@@ -14,7 +14,7 @@ def download_audio_from_youtube(video_url:str):
         output_file_yt = "yt.mp3"
 
         #-x是提取音訊用的 check=True表示如果yt-dlp命令失敗則會引發錯誤    
-        with yt_dlp.YoutubeDL({'extract_audio':True, 'format': 'bestaudio', 'outtmpl':'yt.mp3', 'extractor_args': {'youtube':{'player_client':'ios'}}) as video:
+        with yt_dlp.YoutubeDL({'extract_audio':True, 'format': 'bestaudio', 'outtmpl':'yt.mp3', 'extractor_args': {'youtube':{'player_client':'ios'}}}) as video:
             video.download(video_url)
         print(f"The audio file has been downloaded as {output_file_yt}")
         return output_file_yt
