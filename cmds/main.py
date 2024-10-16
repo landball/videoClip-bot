@@ -1,7 +1,6 @@
 import discord
 from discord import app_commands
 from core.classes import Cog_extension
-import asyncio
 
 class Main(Cog_extension):
     @app_commands.command(description='輸出這機器人的邀請連結')
